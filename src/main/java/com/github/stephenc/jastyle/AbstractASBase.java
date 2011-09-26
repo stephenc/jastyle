@@ -28,9 +28,9 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  */
 
-package net.barenca.jastyle;
+package com.github.stephenc.jastyle;
 
-import net.barenca.jastyle.constants.FileType;
+import com.github.stephenc.jastyle.constants.FileType;
 
 public class AbstractASBase
 {

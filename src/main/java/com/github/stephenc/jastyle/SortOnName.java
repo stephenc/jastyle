@@ -1,5 +1,6 @@
 /**
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *
  *	 Copyright (C) 2009 by Hector Suarez Barenca http://barenca.net
  *   <http://www.gnu.org/licenses/lgpl-3.0.html>
  *
@@ -23,25 +24,26 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  */
 
-package net.barenca.jastyle;
+package com.github.stephenc.jastyle;
 
 import java.io.Serializable;
 import java.util.Comparator;
 
 /**
- * Sort comparison function. Compares the length of the value of pointers in the
- * vectors. The LONGEST Strings will be first in the vector.
+ * Sort comparison function. Compares the value of pointers in the vectors.
  *
  */
-class SortOnLength implements Serializable,Comparator<String>
+class SortOnName implements Serializable, Comparator<String>
 {
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 4170501851833867985L;
+	private static final long serialVersionUID = 5872384371573752223L;
 
-	public int compare(String a, String b)
+	@Override
+	public int compare(String o1, String o2)
 	{
-		return a.length() - b.length();
+		return o1.compareTo(o2);
 	}
+
 }

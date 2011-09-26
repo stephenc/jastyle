@@ -28,7 +28,7 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  */
 
-package net.barenca.jastyle;
+package com.github.stephenc.jastyle;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

@@ -28,7 +28,7 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  */
 
-package net.barenca.jastyle;
+package com.github.stephenc.jastyle;
 
 class ASUtils
 {

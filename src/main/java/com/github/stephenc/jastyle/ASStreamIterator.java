@@ -28,12 +28,12 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  */
 
-package net.barenca.jastyle;
+package com.github.stephenc.jastyle;
 
 import java.io.IOException;
 import java.io.Reader;
 
-import net.barenca.jastyle.reader.ExtendedReader;
+import com.github.stephenc.jastyle.reader.ExtendedReader;
 
 public class ASStreamIterator implements ASSourceIterator
 {

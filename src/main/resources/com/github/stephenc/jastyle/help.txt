@@ -1,4 +1,4 @@
-                           http://jastyle.sourceforge.net
+                         http://stephenc.github.com/jastyle
 
                        jAstyle is based on Artistic Style 1.23
 

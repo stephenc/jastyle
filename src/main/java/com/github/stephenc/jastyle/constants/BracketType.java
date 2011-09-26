@@ -28,62 +28,16 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  */
 
-package net.barenca.jastyle;
+package com.github.stephenc.jastyle.constants;
 
-class SwitchVariables
+public interface BracketType
 {
-
-	private int switchBracketCount = 0;
-	private int unindentDepth = 0;
-	private boolean unindentCase = false;
-
-	public SwitchVariables()
-	{
-	}
-
-	/**
-	 *
-	 * @param switchBracketCount
-	 * @param unindentDepth
-	 * @param unindentCase
-	 */
-	public SwitchVariables(int switchBracketCount, int unindentDepth,
-			boolean unindentCase)
-	{
-		super();
-		this.switchBracketCount = switchBracketCount;
-		this.unindentDepth = unindentDepth;
-		this.unindentCase = unindentCase;
-	}
-
-	public int getSwitchBracketCount()
-	{
-		return switchBracketCount;
-	}
-
-	public void setSwitchBracketCount(int switchBracketCount)
-	{
-		this.switchBracketCount = switchBracketCount;
-	}
-
-	public int getUnindentDepth()
-	{
-		return unindentDepth;
-	}
-
-	public void setUnindentDepth(int unindentDepth)
-	{
-		this.unindentDepth = unindentDepth;
-	}
-
-	public boolean isUnindentCase()
-	{
-		return unindentCase;
-	}
-
-	public void setUnindentCase(boolean unindentCase)
-	{
-		this.unindentCase = unindentCase;
-	}
-
+	public final static int NULL_TYPE = 0,
+    NAMESPACE_TYPE = 1,        // also a DEFINITION_TYPE
+    CLASS_TYPE = 2,            // also a DEFINITION_TYPE
+    INTERFACE_TYPE = 4,        // also a DEFINITION_TYPE
+    DEFINITION_TYPE = 8,
+    COMMAND_TYPE = 16,
+    ARRAY_TYPE  = 32,          // arrays and enums
+    SINGLE_LINE_TYPE = 64;
 }

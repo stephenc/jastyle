@@ -24,7 +24,7 @@
  *
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  */
-package net.barenca.jastyle;
+package com.github.stephenc.jastyle;
 
 import java.io.IOException;
 import java.io.PrintWriter;

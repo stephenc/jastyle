@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package net.barenca.jastyle.reader;
+package com.github.stephenc.jastyle.reader;
 
 import java.io.IOException;
 import java.io.Reader;

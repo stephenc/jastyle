@@ -24,26 +24,60 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  */
 
-package net.barenca.jastyle;
+package com.github.stephenc.jastyle;
 
-import java.io.Serializable;
-import java.util.Comparator;
+import java.io.File;
+import java.io.FilenameFilter;
+import java.util.regex.Pattern;
 
-/**
- * Sort comparison function. Compares the value of pointers in the vectors.
- *
- */
-class SortOnName implements Serializable, Comparator<String>
+public class FileWildcardFilter implements FilenameFilter
 {
+	private Pattern p;
+
+	public FileWildcardFilter(String filenameWithWildcars)
+	{
+		p = Pattern.compile(replaceWildcards(filenameWithWildcars));
+	}
+
 	/**
+	 * Checks for * and ? in the wildcard variable and replaces them correct
+	 * pattern characters.
 	 *
+	 * @param wild
+	 *            - Wildcard name containing * and ?
+	 * @return - String containing modified wildcard name
 	 */
-	private static final long serialVersionUID = 5872384371573752223L;
+	private String replaceWildcards(String wild)
+	{
+		StringBuffer buffer = new StringBuffer();
+
+		char[] chars = wild.toCharArray();
+
+		for (int i = 0; i < chars.length; ++i)
+		{
+			if (chars[i] == '*')
+			{
+				buffer.append(".*");
+			} else if (chars[i] == '?')
+			{
+				buffer.append(".");
+			} else if ("+()^$.{}[]|\\".indexOf(chars[i]) != -1)
+			{
+				buffer.append('\\').append(chars[i]);
+			} else
+			{
+				buffer.append(chars[i]);
+			}
+		}
+
+		return buffer.toString();
+
+	}
 
 	@Override
-	public int compare(String o1, String o2)
+	public boolean accept(File dir, String name)
 	{
-		return o1.compareTo(o2);
+		return p.matcher(name).matches();
 	}
 
 }

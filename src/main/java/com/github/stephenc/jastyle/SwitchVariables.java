@@ -28,9 +28,62 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  */
 
-package net.barenca.jastyle.constants;
+package com.github.stephenc.jastyle;
 
-public interface FileType
+class SwitchVariables
 {
-	public final static int C_TYPE=0, JAVA_TYPE=1, SHARP_TYPE=2;
+
+	private int switchBracketCount = 0;
+	private int unindentDepth = 0;
+	private boolean unindentCase = false;
+
+	public SwitchVariables()
+	{
+	}
+
+	/**
+	 *
+	 * @param switchBracketCount
+	 * @param unindentDepth
+	 * @param unindentCase
+	 */
+	public SwitchVariables(int switchBracketCount, int unindentDepth,
+			boolean unindentCase)
+	{
+		super();
+		this.switchBracketCount = switchBracketCount;
+		this.unindentDepth = unindentDepth;
+		this.unindentCase = unindentCase;
+	}
+
+	public int getSwitchBracketCount()
+	{
+		return switchBracketCount;
+	}
+
+	public void setSwitchBracketCount(int switchBracketCount)
+	{
+		this.switchBracketCount = switchBracketCount;
+	}
+
+	public int getUnindentDepth()
+	{
+		return unindentDepth;
+	}
+
+	public void setUnindentDepth(int unindentDepth)
+	{
+		this.unindentDepth = unindentDepth;
+	}
+
+	public boolean isUnindentCase()
+	{
+		return unindentCase;
+	}
+
+	public void setUnindentCase(boolean unindentCase)
+	{
+		this.unindentCase = unindentCase;
+	}
+
 }

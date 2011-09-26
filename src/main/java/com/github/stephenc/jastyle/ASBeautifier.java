@@ -28,14 +28,14 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  */
 
-package net.barenca.jastyle;
+package com.github.stephenc.jastyle;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Stack;
 
-import net.barenca.jastyle.constants.FileType;
+import com.github.stephenc.jastyle.constants.FileType;
 
 public class ASBeautifier extends AbstractASBase
 {

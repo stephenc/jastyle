@@ -28,12 +28,12 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  */
 
-package net.barenca.jastyle;
+package com.github.stephenc.jastyle;
 
 import java.util.Collections;
 import java.util.List;
 
-import net.barenca.jastyle.constants.FileType;
+import com.github.stephenc.jastyle.constants.FileType;
 
 public class ASResource
 {

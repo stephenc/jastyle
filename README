@@ -1,0 +1,8 @@
+Java Artistic Style Library.
+----------------------------
+
+This is a fork of Hector Suarez Barenca's port of Astyle to java from
+
+  http://sourceforge.net/projects/jastyle/
+
+To a Maven based build hosted at github.

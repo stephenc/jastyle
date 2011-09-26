@@ -28,16 +28,9 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  */
 
-package net.barenca.jastyle.constants;
+package com.github.stephenc.jastyle.constants;
 
-public interface BracketType
+public interface FileType
 {
-	public final static int NULL_TYPE = 0,
-    NAMESPACE_TYPE = 1,        // also a DEFINITION_TYPE
-    CLASS_TYPE = 2,            // also a DEFINITION_TYPE
-    INTERFACE_TYPE = 4,        // also a DEFINITION_TYPE
-    DEFINITION_TYPE = 8,
-    COMMAND_TYPE = 16,
-    ARRAY_TYPE  = 32,          // arrays and enums
-    SINGLE_LINE_TYPE = 64;
+	public final static int C_TYPE=0, JAVA_TYPE=1, SHARP_TYPE=2;
 }
