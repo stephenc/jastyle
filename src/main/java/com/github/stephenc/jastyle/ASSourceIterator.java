@@ -30,18 +30,17 @@
 
 package com.github.stephenc.jastyle;
 
-public interface ASSourceIterator
-{
-	public boolean hasMoreLines();
+public interface ASSourceIterator {
+    public boolean hasMoreLines();
 
-	public StringBuffer nextLine(boolean emptyLineWasDeleted);
+    public StringBuffer nextLine(boolean emptyLineWasDeleted);
 
-	public StringBuffer nextLine();
+    public StringBuffer nextLine();
 
-	public StringBuffer peekNextLine();
+    public StringBuffer peekNextLine();
 
-	// save the last input line after input has reached EOF
-	public String getOutputEOL();
+    // save the last input line after input has reached EOF
+    public String getOutputEOL();
 
-	public void peekReset();
+    public void peekReset();
 }

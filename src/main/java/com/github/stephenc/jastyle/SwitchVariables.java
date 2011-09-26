@@ -30,60 +30,50 @@
 
 package com.github.stephenc.jastyle;
 
-class SwitchVariables
-{
+class SwitchVariables {
 
-	private int switchBracketCount = 0;
-	private int unindentDepth = 0;
-	private boolean unindentCase = false;
+    private int switchBracketCount = 0;
+    private int unindentDepth = 0;
+    private boolean unindentCase = false;
 
-	public SwitchVariables()
-	{
-	}
+    public SwitchVariables() {
+    }
 
-	/**
-	 *
-	 * @param switchBracketCount
-	 * @param unindentDepth
-	 * @param unindentCase
-	 */
-	public SwitchVariables(int switchBracketCount, int unindentDepth,
-			boolean unindentCase)
-	{
-		super();
-		this.switchBracketCount = switchBracketCount;
-		this.unindentDepth = unindentDepth;
-		this.unindentCase = unindentCase;
-	}
+    /**
+     * @param switchBracketCount
+     * @param unindentDepth
+     * @param unindentCase
+     */
+    public SwitchVariables(int switchBracketCount, int unindentDepth,
+                           boolean unindentCase) {
+        super();
+        this.switchBracketCount = switchBracketCount;
+        this.unindentDepth = unindentDepth;
+        this.unindentCase = unindentCase;
+    }
 
-	public int getSwitchBracketCount()
-	{
-		return switchBracketCount;
-	}
+    public int getSwitchBracketCount() {
+        return switchBracketCount;
+    }
 
-	public void setSwitchBracketCount(int switchBracketCount)
-	{
-		this.switchBracketCount = switchBracketCount;
-	}
+    public void setSwitchBracketCount(int switchBracketCount) {
+        this.switchBracketCount = switchBracketCount;
+    }
 
-	public int getUnindentDepth()
-	{
-		return unindentDepth;
-	}
+    public int getUnindentDepth() {
+        return unindentDepth;
+    }
 
-	public void setUnindentDepth(int unindentDepth)
-	{
-		this.unindentDepth = unindentDepth;
-	}
+    public void setUnindentDepth(int unindentDepth) {
+        this.unindentDepth = unindentDepth;
+    }
 
-	public boolean isUnindentCase()
-	{
-		return unindentCase;
-	}
+    public boolean isUnindentCase() {
+        return unindentCase;
+    }
 
-	public void setUnindentCase(boolean unindentCase)
-	{
-		this.unindentCase = unindentCase;
-	}
+    public void setUnindentCase(boolean unindentCase) {
+        this.unindentCase = unindentCase;
+    }
 
 }

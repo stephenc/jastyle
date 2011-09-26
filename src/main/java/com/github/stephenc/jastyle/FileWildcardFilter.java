@@ -30,54 +30,44 @@ import java.io.File;
 import java.io.FilenameFilter;
 import java.util.regex.Pattern;
 
-public class FileWildcardFilter implements FilenameFilter
-{
-	private Pattern p;
+public class FileWildcardFilter implements FilenameFilter {
+    private Pattern p;
 
-	public FileWildcardFilter(String filenameWithWildcars)
-	{
-		p = Pattern.compile(replaceWildcards(filenameWithWildcars));
-	}
+    public FileWildcardFilter(String filenameWithWildcars) {
+        p = Pattern.compile(replaceWildcards(filenameWithWildcars));
+    }
 
-	/**
-	 * Checks for * and ? in the wildcard variable and replaces them correct
-	 * pattern characters.
-	 *
-	 * @param wild
-	 *            - Wildcard name containing * and ?
-	 * @return - String containing modified wildcard name
-	 */
-	private String replaceWildcards(String wild)
-	{
-		StringBuffer buffer = new StringBuffer();
+    /**
+     * Checks for * and ? in the wildcard variable and replaces them correct
+     * pattern characters.
+     *
+     * @param wild - Wildcard name containing * and ?
+     * @return - String containing modified wildcard name
+     */
+    private String replaceWildcards(String wild) {
+        StringBuffer buffer = new StringBuffer();
 
-		char[] chars = wild.toCharArray();
+        char[] chars = wild.toCharArray();
 
-		for (int i = 0; i < chars.length; ++i)
-		{
-			if (chars[i] == '*')
-			{
-				buffer.append(".*");
-			} else if (chars[i] == '?')
-			{
-				buffer.append(".");
-			} else if ("+()^$.{}[]|\\".indexOf(chars[i]) != -1)
-			{
-				buffer.append('\\').append(chars[i]);
-			} else
-			{
-				buffer.append(chars[i]);
-			}
-		}
+        for (int i = 0; i < chars.length; ++i) {
+            if (chars[i] == '*') {
+                buffer.append(".*");
+            } else if (chars[i] == '?') {
+                buffer.append(".");
+            } else if ("+()^$.{}[]|\\".indexOf(chars[i]) != -1) {
+                buffer.append('\\').append(chars[i]);
+            } else {
+                buffer.append(chars[i]);
+            }
+        }
 
-		return buffer.toString();
+        return buffer.toString();
 
-	}
+    }
 
-	@Override
-	public boolean accept(File dir, String name)
-	{
-		return p.matcher(name).matches();
-	}
+    @Override
+    public boolean accept(File dir, String name) {
+        return p.matcher(name).matches();
+    }
 
 }

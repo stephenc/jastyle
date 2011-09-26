@@ -30,7 +30,6 @@
 
 package com.github.stephenc.jastyle.constants;
 
-public interface FileType
-{
-	public final static int C_TYPE=0, JAVA_TYPE=1, SHARP_TYPE=2;
+public interface FileType {
+    public final static int C_TYPE = 0, JAVA_TYPE = 1, SHARP_TYPE = 2;
 }

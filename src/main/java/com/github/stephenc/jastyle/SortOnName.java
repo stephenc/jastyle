@@ -31,19 +31,16 @@ import java.util.Comparator;
 
 /**
  * Sort comparison function. Compares the value of pointers in the vectors.
- *
  */
-class SortOnName implements Serializable, Comparator<String>
-{
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = 5872384371573752223L;
+class SortOnName implements Serializable, Comparator<String> {
+    /**
+     *
+     */
+    private static final long serialVersionUID = 5872384371573752223L;
 
-	@Override
-	public int compare(String o1, String o2)
-	{
-		return o1.compareTo(o2);
-	}
+    @Override
+    public int compare(String o1, String o2) {
+        return o1.compareTo(o2);
+    }
 
 }

@@ -30,91 +30,77 @@
 
 package com.github.stephenc.jastyle;
 
-class ASUtils
-{
-	protected static final String WHITE_SPACE = " \t";
-	public static boolean isPunct(char c)
-	{
-		return (('!' <= c && c <= '/') || (':' <= c && c <= '@')
-				|| ('[' <= c && c <= '`') || ('{' <= c && c <= '~'));
+class ASUtils {
+    protected static final String WHITE_SPACE = " \t";
 
-	}
+    public static boolean isPunct(char c) {
+        return (('!' <= c && c <= '/') || (':' <= c && c <= '@')
+                || ('[' <= c && c <= '`') || ('{' <= c && c <= '~'));
 
-	/**
-	 * Searches for the last character in the object which is not part of either
-	 * str, s or c, and returns its position.
-	 *
-	 * @param in
-	 * @param chars
-	 *            string containing the characters to match against in the
-	 *            object.
-	 * @return
-	 */
-	public static int findLastNotOf(StringBuffer in, String chars)
-	{
-		return findLastNotOf(in, chars, 0);
-	}
+    }
 
-	/**
-	 * Searches for the last character in the object which is not part of either
-	 * str, s or c, and returns its position.
-	 *
-	 * @param in
-	 * @param chars
-	 *            string containing the characters to match against in the
-	 *            object.
-	 * @param end
-	 *            Position of the last character in the string to be taken into
-	 *            consideration for matches. The default value npos indicates
-	 *            that the entire string is considered.
-	 * @return
-	 */
-	public static int findLastNotOf(StringBuffer in, String chars, int end)
-	{
-		for (int index = in.length() - 1; index >= end; index--)
-		{
-			char ch = in.charAt(index);
-			if (chars.indexOf(ch) < 0)
-			{
-				return index;
-			}
-		}
-		return -1;
-	}
+    /**
+     * Searches for the last character in the object which is not part of either
+     * str, s or c, and returns its position.
+     *
+     * @param in
+     * @param chars string containing the characters to match against in the
+     *              object.
+     * @return
+     */
+    public static int findLastNotOf(StringBuffer in, String chars) {
+        return findLastNotOf(in, chars, 0);
+    }
 
-	public static int findFirstNotOf(StringBuffer in, String chars)
-	{
-		return findFirstNotOf(in, chars, 0);
-	}
+    /**
+     * Searches for the last character in the object which is not part of either
+     * str, s or c, and returns its position.
+     *
+     * @param in
+     * @param chars string containing the characters to match against in the
+     *              object.
+     * @param end   Position of the last character in the string to be taken into
+     *              consideration for matches. The default value npos indicates
+     *              that the entire string is considered.
+     * @return
+     */
+    public static int findLastNotOf(StringBuffer in, String chars, int end) {
+        for (int index = in.length() - 1; index >= end; index--) {
+            char ch = in.charAt(index);
+            if (chars.indexOf(ch) < 0) {
+                return index;
+            }
+        }
+        return -1;
+    }
 
-	public static int findFirstNotOf(StringBuffer in, String chars,
-			int start)
-	{
-		for (int index = start; index < in.length(); index++)
-		{
-			char ch = in.charAt(index);
-			if (chars.indexOf(ch) < 0)
-			{
-				return index;
-			}
-		}
-		return -1;
-	}
+    public static int findFirstNotOf(StringBuffer in, String chars) {
+        return findFirstNotOf(in, chars, 0);
+    }
 
-	/**
-	 * Repite el caracter el n&uacute;mero de veces indicado
-	 *
-	 * @param times
-	 * @param ch
-	 * @return
-	 */
-	public static String repeat(int times, char ch)
-	{
-		StringBuffer sb = new StringBuffer(times);
-		for (int i = 0; i < times; i++)
-		{
-			sb.append(ch);
-		}
-		return sb.toString();
-	}
+    public static int findFirstNotOf(StringBuffer in, String chars,
+                                     int start) {
+        for (int index = start; index < in.length(); index++) {
+            char ch = in.charAt(index);
+            if (chars.indexOf(ch) < 0) {
+                return index;
+            }
+        }
+        return -1;
+    }
+
+    /**
+     * Repite el caracter el n&uacute;mero de veces indicado
+     *
+     * @param times
+     * @param ch
+     * @return
+     */
+    public static String repeat(int times, char ch) {
+        StringBuffer sb = new StringBuffer(times);
+        for (int i = 0; i < times; i++) {
+            sb.append(ch);
+        }
+        return sb.toString();
+    }
 }

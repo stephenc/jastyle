@@ -31,17 +31,14 @@ import java.util.Comparator;
 /**
  * Sort comparison function. Compares the length of the value of pointers in the
  * vectors. The LONGEST Strings will be first in the vector.
- *
  */
-class SortOnLength implements Serializable,Comparator<String>
-{
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = 4170501851833867985L;
+class SortOnLength implements Serializable, Comparator<String> {
+    /**
+     *
+     */
+    private static final long serialVersionUID = 4170501851833867985L;
 
-	public int compare(String a, String b)
-	{
-		return a.length() - b.length();
-	}
+    public int compare(String a, String b) {
+        return a.length() - b.length();
+    }
 }
